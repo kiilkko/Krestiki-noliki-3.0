@@ -1,0 +1,130 @@
+﻿<Window
+    x:Class="Krestiki_noliki_3._0.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:user="clr-namespace:Krestiki_noliki_3._0"
+    Title="Крестики-нолики"
+    Width="300"
+    Height="330"
+    ResizeMode="NoResize"
+    Topmost="True"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
+    <Window.DataContext>
+        <user:ViewModel />
+    </Window.DataContext>
+    <Grid Background="#FFFEFFFF">
+        <StackPanel
+            x:Name="FirstPanel"
+            Height="90"
+            Margin="12,12,10.333,0"
+            VerticalAlignment="Top"
+            Panel.ZIndex="3"
+            Orientation="Horizontal">
+            <Button
+                x:Name="b0"
+                Width="90"
+                Background="#FFDCE5E5"
+                BorderBrush="#FFFEFFFF"
+                BorderThickness="1"
+                ClipToBounds="True"
+                Command="{Binding Move_0}"
+                Content="{Binding B0}"
+                FontSize="36"
+                Foreground="#FF494A4B"
+                SnapsToDevicePixels="True" />
+            <Button
+                x:Name="b1"
+                Width="90"
+                Background="#FFDCE5E5"
+                BorderBrush="#FFFCFFFF"
+                ClipToBounds="True"
+                Command="{Binding Move_1}"
+                Content="{Binding B1}"
+                FontSize="36"
+                Foreground="#FF494A4B"
+                SnapsToDevicePixels="True" />
+            <Button
+                x:Name="b2"
+                Width="90"
+                Background="#FFDCE5E5"
+                BorderBrush="#FFFCFFFF"
+                Command="{Binding Move_2}"
+                Content="{Binding B2}"
+                FontSize="36"
+                Foreground="#FF494A4B" />
+        </StackPanel>
+        <StackPanel
+            x:Name="SecondPanel"
+            Height="90"
+            Margin="12,101,11.333,0"
+            VerticalAlignment="Top"
+            Panel.ZIndex="3"
+            Orientation="Horizontal">
+            <Button
+                x:Name="b3"
+                Width="90"
+                Background="#FFDCE5E5"
+                BorderBrush="#FFFEFFFF"
+                Command="{Binding Move_3}"
+                Content="{Binding B3}"
+                FontSize="36"
+                Foreground="#FF494A4B" />
+            <Button
+                x:Name="b4"
+                Width="90"
+                Background="#FFDCE5E5"
+                BorderBrush="#FFFEFFFF"
+                Command="{Binding Move_4}"
+                Content="{Binding B4}"
+                FontSize="36"
+                Foreground="#FF494A4B" />
+            <Button
+                x:Name="b5"
+                Width="90"
+                Background="#FFDCE5E5"
+                BorderBrush="#FFFEFFFF"
+                Command="{Binding Move_5}"
+                Content="{Binding B5}"
+                FontSize="36"
+                Foreground="#FF494A4B" />
+        </StackPanel>
+        <StackPanel
+            x:Name="ThirdPanel"
+            Height="90"
+            Margin="12,190,11.333,-9.333"
+            VerticalAlignment="Top"
+            Panel.ZIndex="3"
+            Orientation="Horizontal">
+            <Button
+                x:Name="b6"
+                Width="90"
+                Background="#FFDCE5E5"
+                BorderBrush="#FFFEFFFF"
+                Command="{Binding Move_6}"
+                Content="{Binding B6}"
+                FontSize="36"
+                Foreground="#FF646465" />
+            <Button
+                x:Name="b7"
+                Width="90"
+                Background="#FFDCE5E5"
+                BorderBrush="#FFFEFFFF"
+                Command="{Binding Move_7}"
+                Content="{Binding B7}"
+                FontSize="36"
+                Foreground="#FF646465" />
+            <Button
+                x:Name="b8"
+                Width="90"
+                Background="#FFDCE5E5"
+                BorderBrush="#FFFEFFFF"
+                Command="{Binding Move_8}"
+                Content="{Binding B8}"
+                FontSize="36"
+                Foreground="#FF494A4B" />
+        </StackPanel>
+    </Grid>
+</Window>
